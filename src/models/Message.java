@@ -1,6 +1,6 @@
 package models;
 
-import java.security.Timestamp;
+import java.sql.Timestamp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -69,4 +69,6 @@ public class Message {
     public void setUpdatad_at(Timestamp updatad_at) {
         this.updatad_at = updatad_at;
     }
+
+
 }
