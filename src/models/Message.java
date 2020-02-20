@@ -19,7 +19,11 @@ import javax.persistence.Table;
     @NamedQuery(
             name = "getMessage",
             query = "SELECT m FROM Message AS m ORDER BY m.id DESC"
-            )//Hibernate用の言語定義の為 ↑はEntityクラス(DTO)を参照する形（矢印の先は、クラス名を記入）
+            ),//Hibernate用の言語定義の為 ↑はEntityクラス(DTO)を参照する形（矢印の先は、クラス名を記入）
+    @NamedQuery(
+            name = "getMessageCount",
+            query = "SELECT COUNT(m) FROM Message AS m"
+            )
 })
 
 @Table(name = "tasks")
